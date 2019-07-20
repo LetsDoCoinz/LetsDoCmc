@@ -1,7 +1,8 @@
 <?php
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 //echo "REQUEST_URI: ".$_SERVER['REQUEST_URI']."<br>";
+//die;
 
 switch (strtolower($_SERVER['REQUEST_URI'])) {
     case '':

@@ -1,0 +1,19 @@
+#Order Deny,Allow
+#Deny from 2.62.206.207
+#Deny from 78.25.156.189
+
+
+#RewriteCond %{HTTP_HOST} ^www.darkcoinz.com(.*)$ [NC]
+#RewriteRule ^(.*)$ https://darkcoinz.com/$1 [R=301,L]
+#
+#RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+#RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=302,L]
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>

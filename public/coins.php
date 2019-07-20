@@ -210,7 +210,9 @@
 //                  $m = new Memcached();
 //                  $m->addServer('localhost', 11211);
 //                  $ticker = $m->get('ticker');
-                  $ticker = file_get_contents('http://api.letsdocoinz.com/ticker');
+                 // $ticker = file_get_contents('http://api.letsdocoinz.com/ticker');
+                  $ticker = file_get_contents('http://api.letsdocoinz.bitxpro.com/ticker');
+
 
                   if(!empty($ticker)){
                       $ticker = json_decode($ticker,1);
